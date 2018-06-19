@@ -1,7 +1,5 @@
 //#include <avr/io.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdint.h>
+#include <avr/io.h>
 #include <string.h>
 #include "aes.h"
 
