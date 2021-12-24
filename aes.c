@@ -225,10 +225,10 @@ void SubWord(uint32_t *w)
 {
     //hex((unsigned char *)w,1,"WORD: ");
     //hex((unsigned char *)w,1,"SUBSTITUED WORD: ");
-    uint32_t tmp_1 = (SBox[(uint8_t)(*w >> 24) & 0xff] << 24);
-    uint32_t tmp_2 = (SBox[(uint8_t)(*w >> 16) & 0xff] << 16);
-    uint32_t tmp_3 = (SBox[(uint8_t)(*w >> 8) & 0xff] << 8);
-    uint32_t tmp_4 = (SBox[(uint8_t)(*w) & 0xff]);
+    uint32_t tmp_1 = ((uint32_t)SBox[(uint8_t)(*w >> 24) & 0xff] << 24);
+    uint32_t tmp_2 = ((uint32_t)SBox[(uint8_t)(*w >> 16) & 0xff] << 16);
+    uint32_t tmp_3 = ((uint32_t)SBox[(uint8_t)(*w >> 8) & 0xff] << 8);
+    uint32_t tmp_4 = ((uint32_t)SBox[(uint8_t)(*w) & 0xff]);
     *w = tmp_1 | tmp_2 | tmp_3 | tmp_4;
 }
 
